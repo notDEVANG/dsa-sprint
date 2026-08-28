@@ -4,19 +4,19 @@
 nums = [2, 7, 11, 15]
 
 
-for i in nums:
-    for j in nums:
-        if i + j == 9:
-            print(i, j)
+# for i in nums:
+#     for j in nums:
+#         if i + j == 9:
+#             print(i, j)
 
 
 
-nums = [2, 7, 11, 15]
+# nums = [2, 7, 11, 15]
 
-for i in range(len(nums)):
-    for j in range(i + 1, len(nums)):
-        if nums[i] + nums[j] == 9:                     #this gives the time complexity of O(n**2)
-            print([i, j])
+# for i in range(len(nums)):
+#     for j in range(i + 1, len(nums)):
+#         if nums[i] + nums[j] == 9:                     #this gives the time complexity of O(n**2)
+#             print([i, j])
 
 def two_sum(nums, target):
     seen = {}                  # number -> index
