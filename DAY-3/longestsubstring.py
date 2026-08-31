@@ -11,4 +11,4 @@ def longestsub(s):
         current_window.add(s[right])
         max_length = max(max_length, right - left + 1)
     return max_length
-print(longestsub("abcacbccb"))
+print(longestsub("abbacabbb"))
