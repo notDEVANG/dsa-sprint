@@ -26,5 +26,5 @@ def two_sum(nums, target):
 
         if complement in seen: # have I seen it already?
             return [seen[complement], i]           # the two indices
-        seen[nums[i]] = i            # store current number so future numbers can find it
+        seen[nums[i]] = i            # store current number so future numbers can find it       
 print(two_sum([2,7,11,15],9))   # problem guarantees a solution, so no return needed after loop
