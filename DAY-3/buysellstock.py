@@ -9,4 +9,4 @@ def maxProfit(prices):
             min_price = price
     return max_profit
 
-print(maxProfit([7,1,5,3,6,5]))
+print(maxProfit([7,1,5,3,6,4]))
