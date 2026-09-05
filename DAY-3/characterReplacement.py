@@ -19,5 +19,3 @@ def characterReplacement(s, k):
         max_length = max(max_length, right - left + 1)
 
     return max_length
-
-print("AABABBA",1)
