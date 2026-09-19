@@ -6,11 +6,11 @@ def search(nums, target):
         mid = (left + right) // 2
         if nums[mid] == target:
             return mid
-        elif nums[mid] < target:
+        elif nums[mid] < tar:
             left = mid + 1
         else:
             right = mid - 1
 
     return - 1
 
-print(search([-1,0,3,5,9,12], 9))
+print(search([-1,0,3,5,9,12], 8))
