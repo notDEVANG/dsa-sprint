@@ -34,31 +34,31 @@ words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
 print(grp_anagram(words))
 
-#more optimised code
+# #more optimised code
 
-from collections import defaultdict
-groups = defaultdict(list)
-for word in words:
-    groups[tuple(sorted(word))].append(word)
-return list(groups.values())
+# from collections import defaultdict
+# groups = defaultdict(list)
+# for word in words:
+#     groups[tuple(sorted(word))].append(word)
+# return list(groups.values())
 
 
 #dict version
-def anagram(s, t):
+# def anagram(s, t):
 
-    count_s = {}
-    count_t = {}
+#     count_s = {}
+#     count_t = {}
 
-    for ch in s:
-        if ch in count_s:
-            count_s[ch] += 1
-        else:
-            count_s[ch] = 1
+#     for ch in s:
+#         if ch in count_s:
+#             count_s[ch] += 1
+#         else:
+#             count_s[ch] = 1
 
-    for ch in t:
-        if ch in count_t:
-            count_t[ch] += 1
-        else:
-            count_t[ch] = 1
+#     for ch in t:
+#         if ch in count_t:
+#             count_t[ch] += 1
+#         else:
+#             count_t[ch] = 1
 
-    return count_s == count_t
+#     return count_s == count_t
