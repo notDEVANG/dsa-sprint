@@ -1,19 +1,19 @@
 # Given an integer array nums, return True if any value appears at least twice, and False if every element is distinct.
 # Example: [1, 2, 3, 1] → True (the 1 repeats). [1, 2, 3, 4] → False.
 
-# def duplicates(nums):
+def duplicates(nums):
 
 
     
-#     seen = set()
+    seen = set()
 
-#     for num in nums:
-#         if num in seen:
-#             return True
+    for num in nums:
+        if num in seen:
+            return True
 
-#         seen.add(num)
+        seen.add(num)
 
-#     return False
+    return False
 
-# nums = [1,2,3,1]
-# print(duplicates(nums))
+nums = [1,2,3,1]
+print(duplicates(nums))
