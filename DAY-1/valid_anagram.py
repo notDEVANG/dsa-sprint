@@ -1,15 +1,15 @@
 # Valid Anagram — given two strings s and t, return True if t is an anagram of s (same letters, same counts, reordered). Example: "anagram", "nagaram" → True. Hint: think about what you'd count, and which hash structure counts things. Python's collections.Counter is worth discovering here.
 
-from collections import Counter
+# from collections import Counter
 
-def anagram(s,t):
-    return Counter(s) == Counter(t)
+# def anagram(s,t):
+#     return Counter(s) == Counter(t)
 
-s = ("apple")
-t = ("paple")
+# s = ("apple")
+# t = ("paple")
 
-result = anagram(s,t)
-print(result)
+# result = anagram(s,t)
+# print(result)
 
 
 # given a list of strings, group the ones that are anagrams of each other. Example: ["eat","tea","tan","ate","nat","bat"] → [["eat","tea","ate"],["tan","nat"],["bat"]]. Harder. Hint: what could you compute from each word that's identical for all its anagrams — a "signature" you could use as a dict key?
