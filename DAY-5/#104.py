@@ -2,7 +2,7 @@
 # from collections import deque
 
 
-# def maxDepth(self, root):
+def maxDepth(self, root):
 #     if not root:
 #         return None
 
@@ -21,18 +21,28 @@
 
 # DFS
 
-def maxDepth(self, root):
-    if not root:
-        return None
 
-    stack = [[root, 1]]
-    res = 1
+#     if not root:
+#         return None
 
-    while stack:
-        node, depth = stack.pop()
+#     stack = [[root, 1]]
+#     res = 1
 
-        if node:
-            res = max(res, depth)
-            stack.append([node.left, depth + 1])
-            stack.append([node.right, depth + 1])
-    return res
+#     while stack:
+#         node, depth = stack.pop()
+
+#         if node:
+#             res = max(res, depth)
+#             stack.append([node.left, depth + 1])
+#             stack.append([node.right, depth + 1])
+#     return res
+
+# Optimised DFS
+
+      if not root:
+            return None
+
+      return 1 + max(
+            self.maxDepth(root.left),
+            self.maxDepth(root.right)
+      )
