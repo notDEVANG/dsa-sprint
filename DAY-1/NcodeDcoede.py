@@ -1,4 +1,4 @@
-def encode(self, strs: List[str]) -> str:
-    
+def encode(self, strs) -> str:
 
-def decode(self, s: str) -> List[str]:
+def decode(self, s):
+    
