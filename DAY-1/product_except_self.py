@@ -45,7 +45,7 @@ def product_except_self(nums):
         answer[i] = prefix
         prefix *= nums[i]
 
-    # Multiply by suffix products
+    # Multiply by suffix product
     suffix = 1
 
     for i in range(n - 1, -1, -1):
