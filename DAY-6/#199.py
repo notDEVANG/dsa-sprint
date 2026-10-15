@@ -18,3 +18,20 @@ def rightSideView(self, root):
             if rightSide:
                 res.append(rightSide.val)
         return res
+
+#dfs
+
+def dfs(node, depth):
+    if not node:
+        return
+    
+    # If we reach a level we haven't added to our result yet
+    if depth == len(res):
+        res.append(node.val)
+    
+    # Traverse right first, then left
+    dfs(node.right, depth + 1)
+    dfs(node.left, depth + 1)
+
+dfs(root, 0)
+return res
