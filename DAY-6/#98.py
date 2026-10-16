@@ -1,4 +1,4 @@
-def isValidBST(self, root: TreeNode | None) -> bool:
+def isValidBST(self, root):
         
         def valid(node, left, right):
             if not node:
