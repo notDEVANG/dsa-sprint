@@ -17,5 +17,3 @@ def generateParenthesis(self, n: int) -> list[str]:
                 backtrack(opened, closed + 1)
                 stack.pop()
 
-
-        return res
