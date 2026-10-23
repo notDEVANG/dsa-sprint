@@ -1,2 +1,5 @@
 def lca(self, root, p, q):
-    lvl = []
+    curr = root
+
+    while curr:
+        if p.val > curr.val
