@@ -1,16 +1,16 @@
-# import heapq
+import heapq
 
 
-# def findKthLargest(self, nums, k):
-#         min_heap = []
+def findKthLargest(self, nums, k):
+        min_heap = []
 
-#         for num in nums:
-#             heapq.heappush(min_heap, num)
+        for num in nums:
+            heapq.heappush(min_heap, num)
 
-#             if len(min_heap) > k:
-#                 heapq.heappop(min_heap)
+            if len(min_heap) > k:
+                heapq.heappop(min_heap)
 
-#         return min_heap[0]
+        return min_heap[0]
 
 #with quick sort [3,2,1,5,6,4]
 
