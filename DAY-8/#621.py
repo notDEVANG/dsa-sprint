@@ -1,24 +1,28 @@
-def leastInterval(self, tasks: list[str], n: int) -> int:
-        count = Counter(tasks)
+from collections import Counter, deque
+import heapq
 
-        heap = [-freq for freq in count.values()]
-        heapq.heapify(heap)
+class Soltuion:
+    def leastInterval(self, tasks: list[str], n: int) -> int:
+            count = Counter(tasks)
 
-        queue = deque()
-        time = 0
-        
-        while heap or queue:
-            time += 1
+            heap = [-freq for freq in count.values()]
+            heapq.heapify(heap)
 
-            if queue and queue[0][1] <= time:
-                freq, available_time = queue.popleft()
-                heapq.heappush(heap, freq)
+            queue = deque()
+            time = 0
+            
+            while heap or queue:
+                time += 1
 
-            if heap:
-                freq = heapq.heappop(heap)
-                freq += 1
+                if queue and queue[0][1] <= time:
+                    freq, available_time = queue.popleft()
+                    heapq.heappush(heap, freq)
 
-                if freq < 0:
-                    queue.append((freq, time + n + 1))
+                if heap:
+                    freq = heapq.heappop(heap)
+                    freq += 1
 
-        return time
+                    if freq < 0:
+                        queue.append((freq, time + n + 1))
+
+            return time
