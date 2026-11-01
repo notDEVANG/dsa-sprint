@@ -1,7 +1,7 @@
 from collections import Counter, deque
 import heapq
 
-class Soltuion:
+class Solution:
     def leastInterval(self, tasks: list[str], n: int) -> int:
             count = Counter(tasks)
 
@@ -14,7 +14,7 @@ class Soltuion:
             while queue or heap:
                 time += 1
 
-                if queue or queue[0][1] <= time:
+                if queue and queue[0][1] <= time:
                     freq, availabe_time = queue.popleft()
                     heapq.heappush(heap, freq)
 
@@ -23,4 +23,5 @@ class Soltuion:
                     freq += 1
 
                     if freq < 0:
-                        queue
+                        queue.append((freq, time + n + 1))
+            return time
