@@ -4,6 +4,7 @@ Koko can decide her bananas-per-hour eating speed of k. Each hour, she chooses s
 Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.
 Return the minimum integer k such that she can eat all the bananas within h hours.
 """
+import math
 class Solution:
     def minEatingSpeed(self, piles, h):
         l, r = 1, max(piles)
