@@ -8,5 +8,16 @@ Return the minimum integer k such that she can eat all the bananas within h hour
 class Solution:
     def minEatingSpeed(self, piles, h):
         l, r = 1, max(piles)
-        mid = (l + r) // 2
 
+        while l < r:
+            mid = (l + r) // 2
+            hours = 0
+            for p in piles:
+                hours += (p + mid - 1) // mid
+
+            if hours <= h:
+                r = mid
+            else:
+                l = mid + 1
+
+        return l
