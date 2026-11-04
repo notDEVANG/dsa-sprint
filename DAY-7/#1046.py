@@ -11,4 +11,5 @@ Return the weight of the last remaining stone. If there are no stones left, retu
 """
 class Soltuion:
     def laststone(self, stones):
+        stones = [-stones for s in stones]
         
