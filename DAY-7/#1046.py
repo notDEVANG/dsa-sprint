@@ -12,8 +12,7 @@ Return the weight of the last remaining stone. If there are no stones left, retu
 import heapq
 class Soltuion:
     def laststone(self, stones):
-        stones = [2,7,4,1,8,1]
-        stones = [-stones for s in stones]
+        stones = [-s for s in stones]
         heapq.heapify(stones)
 
         while len(stones) > 1:
@@ -24,3 +23,4 @@ class Soltuion:
                 heapq.heappush(stones, -(first - second))
 
         return -stones[0] if stones else 0
+    print(laststone(0,[2,7,4,1,8,1]))
