@@ -25,4 +25,8 @@ class Soltuion:
                 result.append(subset.copy())
                 return
 
-            
+            subset.append(nums[i]) #include
+            backtrack(i+1)
+
+            subset.pop() #exclude
+            backtrack(i+1)
