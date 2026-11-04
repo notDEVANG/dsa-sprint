@@ -17,5 +17,5 @@ Output: [[],[0]]
 
 class Soltuion:
     def subset(self, nums):
-        results = []
-        
+        result = []
+        subset = []
