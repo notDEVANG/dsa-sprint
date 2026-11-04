@@ -19,3 +19,10 @@ class Soltuion:
     def subset(self, nums):
         result = []
         subset = []
+
+        def backtrack(i):
+            if i == len(nums):
+                result.append(subset.copy())
+                return
+
+            
