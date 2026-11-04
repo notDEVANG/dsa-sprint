@@ -30,3 +30,7 @@ class Soltuion:
 
             subset.pop() #exclude
             backtrack(i+1)
+
+        backtrack(0)
+        return result
+    print(subset(0, [1,2,3]))
